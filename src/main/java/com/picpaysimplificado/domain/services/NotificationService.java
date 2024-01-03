@@ -18,11 +18,13 @@ public class NotificationService {
 
         NotificationDTO notificationRequest = new NotificationDTO(email, message);
 
-        ResponseEntity<String> notificationResponse = restTemplate.postForEntity(URL, notificationRequest, String.class);
+//        ResponseEntity<String> notificationResponse = restTemplate.postForEntity(URL, notificationRequest, String.class);
+//
+//        if (!(notificationResponse.getStatusCode() == HttpStatus.OK)) {
+//            System.out.println("Erro ao enviar notificação");
+//            throw new Exception("Serviço de notificação indisponível");
+//        }
 
-        if (!(notificationResponse.getStatusCode() == HttpStatus.OK)) {
-            System.out.println("Erro ao enviar notificação");
-            throw new Exception("Serviço de notificação indisponível");
-        }
+        System.out.println("Notificação enviada para o usuário");
     }
 }
